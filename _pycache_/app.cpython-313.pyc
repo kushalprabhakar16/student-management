@@ -1,0 +1,172 @@
+ó
+    5…`jå  ã            	       ó>  • S SK r S SKrS SKrS SKJrJrJrJ r Jr  S SK	J
+r
+J
+r
+  \R                  R                  \R                  R                  \5      5      rS rSS jr\" 5       r\S:X  a2  \R+                  S \" \R.                  R1                  SS	5      5      S
+S
+9  gg)
+é    N)ÚFlaskÚrender_templateÚ requestÚ jsonifyÚ	send_file)ÚdbÚ Studentc                  óº  • [        [        5      n [        R                  R	                  SS[        R
+                  R
+                  [        S5       35      U R                  S'   SU R                  S'   [        R                  " U 5        U R                  5          [        R                  " 5         S S S 5        U R                  S 5      S 5       nU R                  S	5      S
+ 5       nU R                  S
+5      S 5       nU R                  S
+5      S 5       nU R                  SS/S9S 5       nU R                  SS/S9S 5       nU R                  SS/S9S 5       n U R                  SS/S9S 5       nU R                  SS/S9S 5       n	U R                  S5      S 5       n
+U R                  S5      S 5       n
+U R                  S5      S  5       nU $ ! , (       d  f       GN%= f)!NÚDATABASE_URLz
+sqlite:///ú
+students.dbÚSQLALCHEMY_DATABASE_URIFÚSQLALCHEMY_TRACK_MODIFICATIONSÚ/c                  ó   • [        S5      $ )Nz
+index.html©r   © ó    Ú%/tmp/cc-agent/69137278/project/app.pyÚhomeÚcreate_app.<locals>.home   s
+   € ä˜|Ó,Ð,r   z/addc                  ó   • [        S5      $ )Nz	form.htmlr   r   r   r   Úadd_pageÚcreate_app.<locals>.add_page   ó
+   € ä˜{Ó+Ð+r   z/viewc                  ó   • [        S5      $ )Nz	view.htmlr   r   r   r   Ú	view_pageÚcreate_app.<locals>.view_page   r   r   z	/downloadc                   óv  • 1 Skn SS1n[         R                  " 5       n[        R                  " US[        R                  5       n[
+        R                  " [        5       H  u  pEnU V s/ s H  owU ;  d  M
+  U PM  
+   sn USS& U Ht  nX;   d  UR                  S5      (       a  M   [
+        R                  R                  XH5      n	[
+        R                  R                  U	[        5      n
+UR                  Xš5        Mv  
+   MŸ  
+   SSS5        UR                  S 5        [        USS	S
+S
+9$ s  sn f ! , (       d  f       N0= f)z8Bundle all source files into a downloadable ZIP archive.>   ÚinstanceÚ
+__pycache__ú.v3ú.boltr   z.envÚwNz.dbr   zapplication/zipTzstudent-management-system.zip)ÚmimetypeÚ
+as_attachmentÚ
+download_name)ÚioÚ BytesIOÚ zipfileÚ ZipFileÚZIP_DEFLATEDÚosÚwalkÚBASE_DIRÚendswithÚpathÚjoinÚ relpathÚwriteÚseekr    )
+Ú	skip_dirsÚ
+skip_filesÚbufÚzfÚrootÚdirsÚfilesÚdÚfnameÚfullÚ arcnames
+              r   Údownload_projectÚ$create_app.<locals>.download_project"   sù   € ò @ˆ	Ø# VÐ,ˆ
+ÜjŠj‹lˆÜ
+_Š_˜S #¤w×';Ñ';Ô
+<ÀÜ%'§W¢W¬XÖ%6Ñ!˜EÙ&*ÓA¢d °yÑ.@Ÿ1¡dÑA‘Q Û"EØÓ*¨e¯n©n¸U×.CÑ.CÙ ÜŸ7™7Ÿ<™<¨Ó4DÜ Ÿg™gŸo™o¨d´HÓ=GØ—H‘H˜TÖ+ó
+ #ñ &7÷ =ð 	‰Œ
+ÜØØ&ØØ9ñ	
+ð 	
+ùò B÷ =Õ
+<ús%   Á%D*Á)	D%Á6D%Á<BD*Ä%D*Ä*
+D8 z	/studentsÚGET)Ú methodsc                   óô   • [         R                  R                  [         R                  R	                  5       5      R
+                  5       n [
+        U  Vs/ s H  oR                  5       PM  
+   sn5      S4$ s  snf )NéÈ   )r	   ÚqueryÚorder_byÚidÚdescÚallr   Ú to_dict)ÚstudentsÚss     r   Úget_studentsÚ create_app.<locals>.get_students:   sP   € ä—=‘=×)Ñ)¬'¯*©*¯/©/Ó*;Ó<×@Ñ@ÓBˆÜ©XÓ6ªX¨Ÿ	™	ž
+©XÑ6Ó7¸Ð<Ð<ùÒ6s   ÁA5z/students/<int:sid>c                 ó¢   • [         R                  R                  U 5      nU(       d  [         SS05      S4$ [         UR	                  5       5      S4$ )NÚerrorúStudent not foundé”  rE   )r	   rF   Úgetr   rK   ©ÚsidÚ students     r   Ú
+get_studentÚcreate_app.<locals>.get_student?   sF   € ä—-‘-×#Ñ# CÓ(ˆ ÞÜ˜GÐ%8Ð9Ó:¸CÐ?Ð?Üw—‘Ó(Ó)¨3Ð.Ð.r   ÚPOSTc            
+      ó  • [         R                  " SS9=(       d    0 n [        U 5      nU(       a  [         SU05      S4$ [        R
+                  R
+                  U S   S9R                  5       (       a  [         S S05      S	4$ [        R
+                  R
+                  U S
+   R                  5       S
+9R                  5       (       a  [         S S05      S	4$ [	        U S   U S
+   R                  5       U S   U S
+   R                  5       R                  5       U R                  S/ 5      S9nUR                  5         [        R                  R                  U5        [        R                  R                  5         [         UR!                  5       5      S4$ )NT©ÚsilentÚerrorsé  Ú
+student_id©r`   rQ   úStudent ID already existsé™  Úemail©rd   úEmail already existsÚnameÚageÚmarks)r`   rg   rh   rd   ri   éÉ   )r   Úget_jsonÚvalidate_studentr   r	   rF   Ú	filter_byÚfirstÚlowerÚstriprT   Úcalculate_averager   Ú sessionÚaddÚcommitrK   )Údatar^   rW   s      r   Úcreate_studentÚ"create_app.<locals>.create_studentF   sN  € ä×Ò tÑ,×2°ˆÜ! $Ó'ˆÞ
+Ü˜H fÐ-Ó.°Ð3Ð3ä
+=‰=×
+"Ñ
+"¨d°<Ñ.@Ð
+"Ð
+A×
+GÑ
+G×
+IÑ
+IÜ˜GÐ%@ÐAÓBÀCÐGÐGÜ
+=‰=×
+"Ñ
+"¨¨g©×)<Ñ)<Ó)>Ð
+"Ð
+?×
+EÑ
+E×
+GÑ
+GÜ˜GÐ%;Ð<Ó=¸sÐBÐBäØ˜LÑ)Øf‘×#Ñ#Ó%ØU‘
+Øw‘-×%Ñ%Ó'×-Ñ-Ó/Ø—(‘(˜7 BÓ'ñ
+
+ˆ ð 	×!Ñ!Ô#Ü
+
+‰
+‰wÔÜ
+
+‰
+×ÑÔÜw—‘Ó(Ó)¨3Ð.Ð.r   ÚPUTc                 óø  • [         R                  R                  U 5      nU(       d  [         SS05      S4$ [        R
+                  " SS9=(       d    0 n[
+        USS9nU(       a  [         S U05      S4$ S	U;   a_  US	   UR                  :w  aL  [         R                  R                  US	   S
+9R                  5       (       a  [         SS
+05      S4$ US	   Ul         S
+U;   a—  US
+   R                  5       UR                  :w  av  [         R                  R                  US
+   R                  5       S9R                  5       (       a  [         SS05      S4$ US
+   R                  5       R                  5       Ul
+        SU;   a  US   R                  5       Ul
+        SU;   a
+  US   Ul        SU;   a
+  US   Ul        UR!                  5         ["        R$                  R'                  5         [         UR)                  5       5      S4$ )NrQ   rR   rS   Tr\   )Ú partialr^   r_   r`   ra   rb   rc   rd   re   rf   rg   rh   ri   rE   )r	   rF   rT   r   r   rk   rl   r`   rm   rn   ro   rd   rp   rg   rh   ri   rq   r   rr   rt   rK   )rV   rW   ru   r^   s       r   Úupdate_studentÚ"create_app.<locals>.update_student^   s½  € ä—-‘-×#Ñ# CÓ(ˆ ÞÜ˜GÐ%8Ð9Ó:¸CÐ?Ð?ä×Ò tÑ,×2°ˆÜ! $°Ñ5ˆÞ
+Ü˜H fÐ-Ó.°Ð3Ð3à
+˜4Ó
+ D¨Ñ$6¸'×:LÑ:LÓ$LÜ}‰}×&Ñ&°$°|Ñ2DÐ&ÐE×KÑK×MÑMÜ  Ð)DÐEÓFÈÐKÐKØ!% lÑ!3ˆGÔØ
+d‹?˜t G™}×2Ñ2Ó4¸ ¿
+¹
+ÓEÜ}‰}×&Ñ&¨T°'©]×-@Ñ-@Ó-BÐ&ÐC×IÑI×KÑKÜ  Ð)?Ð@ÓAÀ3ÐFÐFØ  ™M×/Ñ/Ó1×7Ñ7Ó9ˆGŒMØ
+T‹>Ø ™<×-Ñ-Ó/ˆGŒLØ
+D‹=Ø˜u™+ˆGŒKØ
+d‹?Ø  ™MˆGŒMØ×!Ñ!Ô#Ü
+
+‰
+×ÑÔÜw—‘Ó(Ó)¨3Ð.Ð.r   ÚDELETEc                 ó  • [         R                  R                  U 5      nU(       d  [         SS05      S4$ [        R
+                  R
+                  U5        [        R
+                  R                  5         [         SS05      S4$ ) NrQ   rR   rS   Ú messagezStudent deletedrE   )r	   rF   rT   r   r   rr   Údeletert   rU   s     r   Údelete_studentÚ"create_app.<locals>.delete_student{   sg   € ä—-‘-×#Ñ# CÓ(ˆ ÞÜ˜GÐ%8Ð9Ó:¸CÐ?Ð?Ü
+
+‰
+×Ñ˜'Ô"Ü
+
+‰
+×ÑÔÜ˜	Ð#4Ð5Ó6¸Ð;Ð;r   r_   c                 ó    • [        SS05      S4$ )NrQ   z
+Bad requestr_   ©r   ©Úes    r   Ú
+bad_requestÚcreate_app.<locals>.bad_request…   s   € ä˜  Ð/Ó0°#Ð5Ð5r   rS   c                 ó    • [        SS05      S4$ )NrQ   z	Not foundrS   r„   r…   s    r   Ú	not_foundÚcreate_app.<locals>.not_found‰   s   € ä˜  Ð-Ó.°Ð3Ð3r   éô  c                 ó    • [        SS05      S4$ )NrQ   zInternal server errorrŒ   r„   r…   s    r   Úserver_errorÚ create_app.<locals>.server_error   s   € ä˜ Ð!8Ð9Ó:¸CÐ?Ð?r   )r   Ú__name__r,   Ú environrT   r0   r1   r.   Úconfigr   Úinit_appÚ
+app_contextÚ
+create_allÚrouteÚerrorhandler)
+Úappr   r   r   r@   rN   rX   rv   r{   r   r‡   rŠ   rŽ   s
+                r   Ú
+create_appr™   
+   s
+  € Ü
+”‹/€CÜ,.¯J©J¯N©NØ˜*¤R§W¡W§\¡\´(¸MÓ%JÐ$KÐLó-€C‡JJÐ(Ñ)ð 49€C‡JJÐ/Ñ0Ü‡K‚KÔà	‰Õ	Ü
+
+Š
+Œ÷ 
+ð 	‡YYˆsƒ^ñ-ó ð-ð 	‡YYˆvÓñ,ó ð,ð 	‡YYˆwÓñ,ó ð,ð 	‡YYˆ{Óñ
+ó ð
+ð. 	‡YYˆ{ U G€YÐ,ñ=ó -ð=ð 	‡YYÐ$¨u¨g€YÐ6ñ/ó 7ð/ð 	‡YYˆ{ V H€YÐ-ñ/ó .ð/ð. 	‡YYÐ$¨u¨g€YÐ6ñ/ó 7ð/ð8 	‡YYÐ$¨x¨j€YÐ9ñ<ó :ð<ð 	×ÑcÓñ6ó ð6ð 	×ÑcÓñ4ó ð4ð 	×ÑcÓñ@ó ð@ð €J÷ 
+Ö	ús   ÂG
+Ç
+
+G c                 óú  • 0 n/ SQnU H"  nX@;  d
+  X   S;   d  M  U(       a  M  U S3X$'   M$  
+   U(       a	  U(       d  U$ SU ;   a;  U R                  S5      (       a%  [        U S   R                  5       5      S:  a  SUS'   S U ;   a2  U R                  S 5      b    [         U S    5      nUS:  d  US	:”  a  S
+US '   SU ;   aL  U R                  S5      (       a6  U S   R                  5       nS
+U;  d  SUR
+                  S
+5      S   ;  a  SUS'   SU ;   aP  U R                  S5      b>  [        U S   [        5      (       d   SUS'   U$ [        S U S    5       5      (       d  SUS'   U$ ! [        [
+        4  a    S
+US '    NÁf = f)N)r`   rg   rh   rd   )NÚ z is requiredrg   é   z"Name must be at least 2 charactersrh   é   éx   zAge must be between 5 and 120zAge must be a numberrd   Ú@Ú.éÿÿÿÿzInvalid email formatri   zMarks must be a list of numbersc              3   ó†   #   • U  H7  n[        U[        [        45      =(       a    S Us=:*  =(       a    S:*  Os  v •  M9  
+   g7f)r   éd   N)Ú
+isinstanceÚintÚfloat)Ú.0Úms     r   Ú	<genexpr>Ú#validate_student.<locals>.<genexpr>¯   s-   é € ÐZÊMÀq”Z ¤C¬ <Ó0×B°Q¸!·]³]¸s´]ÔBÊMùs   ‚?Az'Marks must be numbers between 0 and 100)
+rT   Úlenrp   r¥   Ú
+ValueErrorÚ	TypeErrorÚsplitr¤   ÚlistrJ   ) ru   rz   r^   ÚrequiredÚfieldrh   rd   s           r   rl   rl   ”   sƒ  € Ø
+€FÚ5€HÛˆØ
+Ó
+ ¡
+¨zÕ 9ß7Ø#( '¨Ð 6“
+ñ  ö –gØˆ
+à 
+ƒ~˜$Ÿ(™( 6×*Ñ*Ü
+ˆtF‰|×!Ñ!Ó#Ó
+$ qÓ
+(ØAˆF6‰NØ ƒ}˜Ÿ™ %›Ñ4ð	3Üd˜5‘kÓ"ˆCØQ‹w˜# ›)Ø ?u‘
+ð $ƒ˜4Ÿ8™8 G×,Ñ,ØW‘
+×#Ñ#Ó%ˆØ
+eÓ
+˜s¨%¯+©+°cÓ*:¸2Ñ*>Ó>Ø4ˆF7‰OØ $ƒ˜4Ÿ8™8 GÓ,Ñ8Ü˜$˜w™-¬×.Ñ.Ø?ˆF7‰Oð €Mô ÑZÈDÐQXÊMÓZ×ZÑZØGˆF7‰OØ
+€Møô œIÐ&ó 	3Ø2ˆF5‹Mð	3ús   ÂE" Å"E:Å9E:Ú__main__z 0.0.0.0ÚPORTiˆ  T)ÚhostÚportÚdebug)F)r'   r,   r)   Úflaskr   r   r   r   r    Úmodelsr   r	   r0   Ú abspathÚ dirnameÚ__file__r.   r™   rl   r˜   r   Úrunr¥   r‘   rT   r   r   r   Ú<module>r½      s   ðÛ 	Û 	Û ß EÕ Eß à
+
+7‰7?‰?˜2Ÿ7™7Ÿ?™?¨8Ó4Ó
+5€òGôTñ@  ƒl€ð ˆzÓØ ‡GG¡ R§Z¡Z§^¡^°F¸DÓ%AÓ!BÈ$€GÒOð r   
