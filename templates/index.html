@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - StudentMS{% endblock %}
+
+{% block content %}
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="card stat-card shadow-sm">
+            <div class="card-body d-flex align-items-center">
+                <div class="stat-icon bg-primary-subtle text-primary"><i class="bi bi-people-fill"></i></div>
+                <div class="ms-3">
+                    <h3 id="totalCount" class="mb-0">0</h3>
+                    <p class="text-muted mb-0">Total Students</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card stat-card shadow-sm">
+            <div class="card-body d-flex align-items-center">
+                <div class="stat-icon bg-success-subtle text-success"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="ms-3">
+                    <h3 id="avgScore" class="mb-0">0</h3>
+                    <p class="text-muted mb-0">Average Score</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card stat-card shadow-sm">
+            <div class="card-body d-flex align-items-center">
+                <div class="stat-icon bg-warning-subtle text-warning"><i class="bi bi-star-fill"></i></div>
+                <div class="ms-3">
+                    <h3 id="topGrade" class="mb-0">-</h3>
+                    <p class="text-muted mb-0">Top Grade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="bi bi-speedometer2"></i> Dashboard</h5>
+        <a href="/add" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add Student</a>
+    </div>
+    <div class="card-body text-center py-5">
+        <i class="bi bi-mortarboard-fill display-1 text-primary opacity-25"></i>
+        <h4 class="mt-3">Welcome to Student Management System</h4>
+        <p class="text-muted">Manage student records, track marks and grades.</p>
+        <div class="d-flex justify-content-center gap-2">
+            <a href="/add" class="btn btn-primary"><i class="bi bi-person-plus"></i> Add Student</a>
+            <a href="/view" class="btn btn-outline-primary"><i class="bi bi-list-ul"></i> View Students</a>
+            <a href="/download" class="btn btn-success"><i class="bi bi-download"></i> Download Project</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+fetch("/students").then(r => r.json()).then(data => {
+    document.getElementById("totalCount").textContent = data.length;
+    const averages = data.filter(s => s.average !== null).map(s => s.average);
+    document.getElementById("avgScore").textContent = averages.length
+        ? (averages.reduce((a,b)=>a+b,0)/averages.length).toFixed(1) : "0";
+    const grades = data.map(s => s.grade).filter(g => g && g !== "-");
+    const order = ["A+","A","B","C","D","F"];
+    grades.sort((a,b)=>order.indexOf(a)-order.indexOf(b));
+    document.getElementById("topGrade").textContent = grades[0] || "-";
+}).catch(() => {});
+</script>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}View Students - StudentMS{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <h5 class="mb-0"><i class="bi bi-table"></i> All Students</h5>
+        <div class="d-flex gap-2">
+            <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search...">
+            <a href="/add" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Add</a>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Marks</th>
+                        <th>Average</th>
+                        <th>Grade</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsBody">
+                    <tr><td colspan="9" class="text-center py-4 text-muted">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function gradeBadge(grade) {
+    const map = {
+        "A+": "success", "A": "success", "B": "primary",
+        "C": "info", "D": "warning", "F": "danger", "-": "secondary"
+    };
+    return `<span class="badge bg-${map[grade] || "secondary"}">${grade}</span>`;
+}
+
+function loadStudents() {
+    fetch("/students").then(r => r.json()).then(data => {
+        const tbody = document.getElementById("studentsBody");
+        if (!data.length) {
+            tbody.innerHTML = `<tr><td colspan="9" class="text-center py-5 text-muted">
+                <i class="bi bi-inbox display-6 d-block mb-2 opacity-25"></i>No students found.
+                <br><a href="/add" class="btn btn-sm btn-primary mt-2">Add First Student</a></td></tr>`;
+            return;
+        }
+        tbody.innerHTML = data.map(s => `
+            <tr>
+                <td>${s.id}</td>
+                <td>${s.student_id}</td>
+                <td>${s.name}</td>
+                <td>${s.age}</td>
+                <td>${s.email}</td>
+                <td>${s.marks.length ? s.marks.join(", ") : "-"}</td>
+                <td>${s.average !== null ? s.average : "-"}</td>
+                <td>${gradeBadge(s.grade)}</td>
+                <td>
+                    <button class="btn btn-sm btn-outline-danger" onclick="deleteStudent(${s.id})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>`).join("");
+    }).catch(() => {
+        document.getElementById("studentsBody").innerHTML =
+            `<tr><td colspan="9" class="text-center text-danger py-4">Failed to load students.</td></tr>`;
+    });
+}
+
+function deleteStudent(id) {
+    if (!confirm("Delete this student?")) return;
+    fetch(`/students/${id}`, { method: "DELETE" })
+        .then(r => r.json())
+        .then(() => loadStudents())
+        .catch(() => alert("Delete failed."));
+}
+
+document.getElementById("searchInput").addEventListener("keyup", function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll("#studentsBody tr").forEach(tr => {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? "" : "none";
+    });
+});
+
+loadStudents();
+</script>
+{% endblock %}
