@@ -1,0 +1,151 @@
+{
+  "info": {
+    "name": "Student Management System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for the Student Management System REST API."
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students",
+          "host": ["{{base_url}}"],
+          "path": ["students"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "status": "OK",
+          "code": 200,
+          "body": "[\n  {\n    \"id\": 1,\n    \"student_id\": \"1\",\n    \"name\": \"John\",\n    \"age\": 20,\n    \"email\": \"john@gmail.com\",\n    \"marks\": [85, 90, 78],\n    \"average\": 84.33,\n    \"grade\": \"B\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students/1",
+          "host": ["{{base_url}}"],
+          "path": ["students", "1"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"id\": 1,\n  \"student_id\": \"1\",\n  \"name\": \"John\",\n  \"age\": 20,\n  \"email\": \"john@gmail.com\",\n  \"marks\": [85, 90, 78],\n  \"average\": 84.33,\n  \"grade\": \"B\"\n}"
+        },
+        {
+          "name": "404 Not Found",
+          "status": "Not Found",
+          "code": 404,
+          "body": "{\n  \"error\": \"Student not found\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": \"2\",\n  \"name\": \"Rahul\",\n  \"age\": 21,\n  \"email\": \"rahul@gmail.com\",\n  \"marks\": []\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/students",
+          "host": ["{{base_url}}"],
+          "path": ["students"]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Created",
+          "status": "Created",
+          "code": 201,
+          "body": "{\n  \"age\": 21,\n  \"average\": null,\n  \"email\": \"rahul@gmail.com\",\n  \"grade\": \"-\",\n  \"id\": 2,\n  \"marks\": [],\n  \"name\": \"Rahul\",\n  \"student_id\": \"2\"\n}"
+        },
+        {
+          "name": "400 Validation Error",
+          "status": "Bad Request",
+          "code": 400,
+          "body": "{\n  \"errors\": {\n    \"email\": \"Invalid email format\"\n  }\n}"
+        },
+        {
+          "name": "409 Conflict",
+          "status": "Conflict",
+          "code": 409,
+          "body": "{\n  \"error\": \"Student ID already exists\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rahul Sharma\",\n  \"age\": 22,\n  \"marks\": [88, 92, 95]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/students/2",
+          "host": ["{{base_url}}"],
+          "path": ["students", "2"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"id\": 2,\n  \"student_id\": \"2\",\n  \"name\": \"Rahul Sharma\",\n  \"age\": 22,\n  \"email\": \"rahul@gmail.com\",\n  \"marks\": [88, 92, 95],\n  \"average\": 91.67,\n  \"grade\": \"A+\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students/2",
+          "host": ["{{base_url}}"],
+          "path": ["students", "2"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Student deleted\"\n}"
+        },
+        {
+          "name": "404 Not Found",
+          "status": "Not Found",
+          "code": 404,
+          "body": "{\n  \"error\": \"Student not found\"\n}"
+        }
+      ]
+    }
+  ]
+}
